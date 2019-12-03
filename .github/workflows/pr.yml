@@ -14,4 +14,4 @@ jobs:
     
     - uses: ./
     - name: 'Local lint'
-      uses: actions/lint/
+      uses: actions/lint@v1
