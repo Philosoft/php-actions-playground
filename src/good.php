@@ -1,3 +1,3 @@
 <?php
 
-echo phpversion() . PHP_EOL;
+echo phpversion() . "\n";
