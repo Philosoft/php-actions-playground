@@ -13,8 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - name: PHP Syntax Checker (Lint)
-      uses: StephaneBour/actions-php-lint@7.3
-      with:
-        # Folder to check syntax
-        dir: src
+    - uses: ./
+    - name: 'Local lint'
+      uses: actions/lint/
