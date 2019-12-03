@@ -15,7 +15,7 @@ echo ":: Running PHP Syntax Checker (lint) on ${DIR_TO_SCAN}"
 echo ":: PHP Version : ${PHP_VERSION}"
 
 if [ ! -d "${DIR_TO_SCAN}" ] && [ ! -f "${DIR_TO_SCAN}" ]; then
-  echo "\nInvalid directory or file: ${DIR_TO_SCAN}"
+  echo -e "\nInvalid directory or file: ${DIR_TO_SCAN}"
 
   exit 2
 fi
@@ -24,8 +24,8 @@ EXIT_CODE=0
 for file in $(find ${DIR_TO_SCAN} -type f -name "*.php" ! -path "./vendor/*"); do
   RESULT=$(php -l ${file} || true)
 
-  if [ "${RESULTS}" != "No syntax errors detected in ${file}" ]; then
-    echo "\n${RESULT}\n"
+  if [ "${RESULT}" != "No syntax errors detected in ${file}" ]; then
+    echo -e "\n${RESULT}\n"
     EXIT_CODE=1
   fi
 done
