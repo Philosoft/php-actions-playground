@@ -18,9 +18,3 @@ jobs:
       with:
         # Folder to check syntax
         dir: src
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate
-
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --no-suggest
