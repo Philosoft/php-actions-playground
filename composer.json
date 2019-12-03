@@ -1,4 +1,7 @@
 {
+    "name": "nonexistent/package",
+    "description": "mock description",
+    "license": "proprietary",
     "require": {
         "phpunit/phpunit": "~8"
     }
